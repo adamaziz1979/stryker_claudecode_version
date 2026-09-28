@@ -18,7 +18,13 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Lexend,Aptos,Arial,sans-serif;line-height:1.58}
 main{max-width:1180px;margin:0 auto;background:var(--paper);min-height:100vh;box-shadow:0 0 34px rgba(0,0,0,.06)}
-.hero{background:#101214;color:#fff;padding:48px 56px 38px;border-top:7px solid var(--gold)}
+.hero{position:relative;background:#101214;color:#fff;padding:48px 56px 38px;border-top:7px solid var(--gold)}
+.site-link{position:absolute;top:16px;right:24px;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#101214;background:var(--gold);text-decoration:none;border-radius:999px;padding:6px 12px;line-height:1}
+.site-link:hover{filter:brightness(1.08);text-decoration:underline}
+.site-link:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.site-link svg{width:12px;height:12px}
+@media (max-width:560px){.site-link{position:static;margin-bottom:14px}}
+@media print{.site-link{color:#101214}.site-link::after{content:" (" attr(href) ")";font-weight:400}}
 .hero .eyebrow{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:#c7ccd2;font-weight:600}
 .hero h1{font-size:38px;line-height:1.1;margin:8px 0 10px}
 .hero h1 span{color:var(--gold)}
@@ -174,11 +180,12 @@ td,.v,.tag,.metricrow,.num{font-variant-numeric:tabular-nums}
 <main>
 
 <header class="hero">
+  <a class="site-link" href="https://www.stryker.com/au/en/index.html" target="_blank" rel="noopener" title="Stryker Australia and New Zealand website">stryker.com/au <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 1.5h6v6M10.5 1.5 3 9M9 7.5v3H1.5V3h3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
   <div class="eyebrow">Executive interview preparation • Sydney, Australia</div>
   <h1><span>Stryker</span>: Company, Role and Interview Brief</h1>
   <div class="sub">Senior Lead Data Analyst (Sydney, hybrid) | Executive infographic, Stage 1 executive briefing, compensation and headcount, Stage 2 company dossier (sections 1 to 7), role deconstruction and Stage 3 top five experiences to lead with.</div>
   <div class="meta">
-    <span>Prepared: 28 September 2026 (version 4, updated 29 September 2026)</span>
+    <span>Prepared: 28 September 2026 (version 5, updated 29 September 2026)</span>
     <span>Candidate: Adam Aziz</span>
     <span>Currency: USD for company figures; AUD for pay</span>
     <span><span class="badge fact">Observed Fact</span> <span class="badge infer">Strong Inference</span> <span class="badge hyp">Working Hypothesis</span></span>
@@ -708,7 +715,7 @@ The JD prefers a technical degree, and you hold a BA in Visual Arts. After years
 
 <footer class="footer">
 <p><strong>Evidence labels.</strong> <span class="badge fact">Observed Fact</span> directly supported by a cited source. <span class="badge infer">Strong Inference</span> multiple facts point to it. <span class="badge hyp">Working Hypothesis</span> plausible, needs validation in interview.</p>
-<p>Company figures in USD; pay in AUD. Share price data is for context only and is not investment advice. Prepared 28 September 2026 for Adam Aziz's interview preparation. Version 4 (29 September 2026): share-price chart now has six dated event labels across the full range, with detail on hover; the July 2026 label corrected from "Q2 beat" to "Q2 sales miss". Version 3: compact one-line references with full titles on hover, inference-only references relabelled.</p>
+<p>Company figures in USD; pay in AUD. Share price data is for context only and is not investment advice. Prepared 28 September 2026 for Adam Aziz's interview preparation. Version 5 (29 September 2026): company website link added at the top right. Version 4 (29 September 2026): share-price chart now has six dated event labels across the full range, with detail on hover; the July 2026 label corrected from "Q2 beat" to "Q2 sales miss". Version 3: compact one-line references with full titles on hover, inference-only references relabelled.</p>
 </footer>
 </main>
 
